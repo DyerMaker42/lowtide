@@ -7,12 +7,12 @@ const assertEqual = function(actual, expected) {
     result = true;
   } else {
     result = false;
-  };
+  }
   if (result) {
     console.log(`😇😍✅Assertion Passed:${actual} === ${expected}`);
   } else {
     console.log(`🤬😰🛑Assertion Failed:${actual} !== ${expected}`);
-  };
+  }
 
 };
 

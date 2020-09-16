@@ -1,6 +1,6 @@
 // function implementation
 
-const assertEqual = function(actual, expected) {
+const assertEqual = (actual, expected)  => {
   let result = "";
 
   if (actual === expected) {

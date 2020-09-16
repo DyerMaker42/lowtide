@@ -33,7 +33,7 @@ const eqArrays = function(a,b) {
 // assertEqual(1, 1);
 
 const eqObjects = (obj1,obj2) => {
-  let result;
+  //check # of keys match
   const ob1Keys = Object.keys(obj1).length;
   const ob2Keys = Object.keys(obj2).length;
   if (ob2Keys !== ob1Keys){
@@ -41,15 +41,17 @@ const eqObjects = (obj1,obj2) => {
   }
   for (let key in obj1){
     console.log("TEST",obj2[key], obj1[key])
+    //check same keys in each
     if (!obj2[key]){
-      result = false;
+      return false;
+    //check same key values in each
     } else if(obj1[key]!==obj2[key]){
-      result = false
+      return false
     } else {
-      result = true
+      
     }
   }
-return result
+return true
 }
 
 const ab = {a: "1", b: "2"}

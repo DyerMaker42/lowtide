@@ -20,15 +20,26 @@ const assertArraysEqual = function (actualArray, expectedArray) {
 
 
 const without = function (source, itemsToRemove) {
+  let output = [];
+  let keep = true;
   if (itemsToRemove === []) {
     return source
   } else if (eqArrays(source,itemsToRemove)) {
-    return []
+    return output
   }
   //check each element in items to remove array is within source array
+   
   for (let i = 0; i < source.length; i ++){
+     keep = true
     for (let j = 0; j< itemsToRemove.length; j++){
-      console.log(i,j)
+       
+      if (source[i]===itemsToRemove[j]) {
+        keep = false;
+      }
+      
+    }
+    if (keep){
+      output.push(source[i])
     }
   }
   // compare items between each
@@ -37,7 +48,7 @@ const without = function (source, itemsToRemove) {
 
   return output
 }
-
+console.log(without([1,2,3],[1,2]))
 assertArraysEqual(without([1,2,3],[1,2,3]),[]);
 assertArraysEqual(without([1,2,3],[1]),[2,3]);
-assertArraysEqual(without)
+assertArraysEqual(without(["a",1,2],["a"]),[1,2]);

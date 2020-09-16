@@ -17,6 +17,11 @@ const assertEqual = function(actual, expected) {
 const countOnly = (allItems, itemsToCount) => {
   const results = {};
   
+
+  for (const item of allItems) {
+   
+    console.log("countOnly -> item", item)
+  }
   
  
  

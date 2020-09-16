@@ -19,17 +19,19 @@ const countOnly = (allItems, itemsToCount) => {
 
 
   for (const item of allItems) {
-    for (let name in itemsToCount) {
 
-      if (results[item]) {
-        results[item] += 1
-      } else if (itemsToCount[name]===allItems[item]) {
-        results[item] = 1
 
-      }
+
+    if (results[item]) {
+      results[item] += 1
+      
+    } else if (itemsToCount[item]) {
+      results[item] = 1
 
     }
+
   }
+
 
 
 

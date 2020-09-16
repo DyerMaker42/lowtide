@@ -14,7 +14,7 @@ const assertEqual = (actual, expected) => {
 
 };
 
-const eqArrays = function(a, b) {
+const eqArrays = function (a, b) {
   if (a.length !== b.length) {
     return false;
   }
@@ -81,3 +81,11 @@ const eqObjects = (obj1, obj2) => {
 // const cd2 = { c: "1", d: ["2", 3, 4] };
 // assertEqual(eqObjects(cd, dc), true);
 // assertEqual(eqObjects(cd, cd2), false);
+
+const assertObjectsEqual = (actual, expected) => {
+  if ((eqObjects(actual, expected))) {
+    console.log(`😇😍✅Assertion Passed:${actual} === ${expected}`);
+  } else {
+    console.log(`🤬😰🛑Assertion Failed:${actual} !== ${expected}`);
+  }
+}

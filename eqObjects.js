@@ -40,15 +40,18 @@ const eqObjects = (obj1,obj2) => {
     return false
   }
   for (let key in obj1){
-    console.log("TEST",obj2[key], obj1[key])
+    //console.log("TEST",obj2[key], obj1[key])
     //check same keys in each
     if (!obj2[key]){
       return false;
     //check same key values in each
     } else if(obj1[key]!==obj2[key]){
       return false
-    } else {
-      
+    } else if (Array.isArray(obj1[key])){
+      console.log(key)
+      if(!eqArrays(obj1[key],obj2[key])){
+        return false
+      }
     }
   }
 return true

@@ -15,14 +15,14 @@ const assertEqual = (actual, expected)  => {
 };
 
 const findKey = (object, callback) => {
+  let result = undefined;
   for (let key in object) {
-    
-    console.log("1",object[key].stars)
-    console.log("findKey -> callback(object[key].stars)", callback(object[key]))
-      console.log("3",object[key])
-    
-    
+    if(callback(object[key])){
+      result = key;
+      return result
+    }
   }
+  return result
 }
 
 
@@ -35,4 +35,4 @@ const test = {
   "Akelarre":  { stars: 3 }
 };
 
-findKey(test, x => x.stars === 2);
+console.log(findKey(test, x => x.stars === 3))

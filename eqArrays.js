@@ -10,6 +10,4 @@ const eqArrays = (a,b) => {
   return true
 }
 
-
-
 module.exports = eqArrays;

@@ -1,4 +1,4 @@
-const tail = function(input) {
+const tail = (input) => {
   if (!input) {
     return [];
   }

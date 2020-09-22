@@ -24,21 +24,21 @@ const without = function (source, itemsToRemove) {
   let keep = true;
   if (itemsToRemove === []) {
     return source
-  } else if (eqArrays(source,itemsToRemove)) {
+  } else if (eqArrays(source, itemsToRemove)) {
     return output
   }
   //check each element in items to remove array is within source array
-   
-  for (let i = 0; i < source.length; i ++){
-     keep = true
-    for (let j = 0; j< itemsToRemove.length; j++){
-       
-      if (source[i]===itemsToRemove[j]) {
+
+  for (let i = 0; i < source.length; i++) {
+    keep = true
+    for (let j = 0; j < itemsToRemove.length; j++) {
+
+      if (source[i] === itemsToRemove[j]) {
         keep = false;
       }
-      
+
     }
-    if (keep){
+    if (keep) {
       output.push(source[i])
     }
   }
@@ -48,7 +48,10 @@ const without = function (source, itemsToRemove) {
 
   return output
 }
-console.log(without([1,2,3],[1,2]))
-assertArraysEqual(without([1,2,3],[1,2,3]),[]);
-assertArraysEqual(without([1,2,3],[1]),[2,3]);
-assertArraysEqual(without(["a",1,2],["a"]),[1,2]);
+console.log(without([1, 2, 3], [1, 2]))
+assertArraysEqual(without([1, 2, 3], [1, 2, 3]), []);
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+assertArraysEqual(without(["a", 1, 2], ["a"]), [1, 2]);
+
+
+module.exports = without;

@@ -36,3 +36,6 @@ const test = {
 };
 
 console.log(findKey(test, x => x.stars === 3));
+
+
+module.exports = findKey;

@@ -1,7 +1,7 @@
 {
-  "name": "lowtide",
+  "name": "@nicholask/lowtide",
   "version": "1.0.0",
-  "description": "",
+  "description": "a educationally motivated copy of the lodash library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"

@@ -35,7 +35,7 @@ const test = {
   "Akelarre":  { stars: 3 }
 };
 
-console.log(findKey(test, x => x.stars === 3));
+// console.log(findKey(test, x => x.stars === 3));
 
 
 module.exports = findKey;

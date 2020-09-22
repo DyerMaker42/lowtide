@@ -36,7 +36,7 @@ const letterPositions = (sentence) => {
   return results;
 };
 
-console.log(letterPositions("lighthouse in the house"));
+// console.log(letterPositions("lighthouse in the house"));
 // assertArraysEqual(letterPositions('Hello')['l'], [2,3])
 // assertArraysEqual(letterPositions('lighthouse in the house').i, [1,11])
 
